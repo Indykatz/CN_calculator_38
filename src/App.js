@@ -1,10 +1,29 @@
 import "./App.css";
-
+import { useState } from "react";
+import { evaluate } from "mathjs";
 import HeaderBanner from "./component/Header";
 import FooterBanner from "./component/Footer";
+import Operators from "./component/Operators";
+import Numbers from "./component/Numbers";
 
-function App() {
-  // list
+const App = () => {
+  // calcultor state
+  const [input, setInput] = useState("");
+  // function to caluclate result
+  const calculate = (aButton) => {
+    if (aButton === "=") {
+      const result = evaluate(input);
+      setInput(result);
+    } else if (aButton === "c") {
+      setInput("");
+    } else setInput(input + aButton);
+  };
+  // handle click
+  const handleClick = (e) => {
+    const display = e.target.textContent;
+    calculate(display);
+  };
+
   return (
     <div className="App">
       {/* Header */}
@@ -16,7 +35,14 @@ function App() {
         />
       </div>
       {/* Body */}
-      <div className="content"></div>
+      <div className="content">
+        <div className="calculator">
+          <h1>Calculator</h1>
+          <h1>{input}</h1>
+          <Operators handleClick={handleClick} />
+          <Numbers handleClick={handleClick} />
+        </div>
+      </div>
       {/* Footer */}
       <div className="footer">
         <FooterBanner name="Katherine Ayers" github="Indykatz" />
@@ -24,6 +50,6 @@ function App() {
       {/* End of App div */}
     </div>
   );
-}
+};
 
 export default App;
