@@ -17,7 +17,7 @@ const Numbers = ({ handleClick }) => {
   return (
     <div>
       {numButtons.map((aButton) => (
-        <button onClick={handleClick} key={aButton}>
+        <button className="numberButtons" onClick={handleClick} key={aButton}>
           {aButton}
         </button>
       ))}

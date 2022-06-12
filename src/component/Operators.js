@@ -3,7 +3,7 @@ const Operators = ({ handleClick }) => {
   return (
     <div>
       {operatorButtons.map((aButton) => (
-        <button onClick={handleClick} key={aButton}>
+        <button className="oppButtons" onClick={handleClick} key={aButton}>
           {aButton}
         </button>
       ))}

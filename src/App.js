@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* Header */}
+      Header
       <div className="header">
         <HeaderBanner
           name="Katherine Ayers"
@@ -37,10 +37,16 @@ const App = () => {
       {/* Body */}
       <div className="content">
         <div className="calculator">
-          <h1>Calculator</h1>
-          <h1>{input}</h1>
-          <Operators handleClick={handleClick} />
-          <Numbers handleClick={handleClick} />
+          {/* <h1>Calculator</h1> */}
+          <h1 className="display" data-testid="display">
+            {input}
+          </h1>
+          <div className="calc-box">
+            <div className="numbers">
+              <Numbers handleClick={handleClick} />
+            </div>
+            <Operators handleClick={handleClick} />
+          </div>
         </div>
       </div>
       {/* Footer */}
