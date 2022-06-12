@@ -33,7 +33,7 @@
 .content {
   padding: 10px;
   text-align: center;
-  min-height: 700px;
+  /* min-height: 700px; */
 }
 
 .display {
