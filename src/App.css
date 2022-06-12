@@ -59,6 +59,10 @@
   margin-right: auto;
 }
 
+.numbers {
+  flex-direction: row-reverse;
+}
+
 .numberButtons {
   padding: 20px;
   margin-top: 10px;

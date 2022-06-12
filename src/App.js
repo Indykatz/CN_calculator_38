@@ -45,6 +45,7 @@ const App = () => {
             <div className="numbers">
               <Numbers handleClick={handleClick} />
             </div>
+            
             <Operators handleClick={handleClick} />
           </div>
         </div>
