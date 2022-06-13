@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
-      Header
+      {/* Header */}
       <div className="header">
         <HeaderBanner
           name="Katherine Ayers"
